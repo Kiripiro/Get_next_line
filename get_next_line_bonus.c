@@ -6,13 +6,13 @@
 /*   By: atourret <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/01 16:43:27 by atourret          #+#    #+#             */
-/*   Updated: 2020/12/01 18:39:02 by atourret         ###   ########lyon.fr   */
+/*   Updated: 2020/12/01 18:50:44 by atourret         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-void	ft_putstr(char *str)
+/*void	ft_putstr(char *str)
 {
 	int i = 0;
 	while (str[i])
@@ -20,7 +20,7 @@ void	ft_putstr(char *str)
 		write(1, &str[i], 1);
 		i++;
 	}
-}
+}*/
 
 char	*ft_clean_line(char *new_line, char **line, int r)
 {
@@ -32,10 +32,10 @@ char	*ft_clean_line(char *new_line, char **line, int r)
 	i = 0;
 	while (new_line[i] && new_line[i] != '\n')
 		i++;
-	ft_putstr("a\n");
+//	ft_putstr("a\n");
 	if (i < length)
 	{
-		ft_putstr("b\n");
+//		ft_putstr("b\n");
 		*line = ft_substr(new_line, 0, i);
 		tmp = ft_substr(&new_line[i + 1], 0, length);
 		if (new_line)
@@ -44,7 +44,7 @@ char	*ft_clean_line(char *new_line, char **line, int r)
 	}
 	else if (r == 0)
 	{
-		ft_putstr("c\n");
+//		ft_putstr("c\n");
 		*line = new_line;
 		new_line = 0;
 	}
